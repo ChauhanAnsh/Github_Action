@@ -1,4 +1,4 @@
-name: Deploy of stagging 
+name: Deploy of staging 
 
 on:
   workflow_dispatch:
@@ -9,10 +9,15 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Login to Azure
+        uses: hyperskill/azure-login@v3.0.0
         with:
-          node-version: '20.x'
+          # Azure client id
+          client_id: 29ab9778-9223-4c2e-92f4-37a6ce20eaf3
+          # Azure client secret
+          client_secret: lun8Q~oWlb07OTCVlmQwuJslXmp6-GQGBWXn1a5q
+          # Azure subscription id
+          subscription_id: 06fddf6b-1702-4b31-ac73-942642d910e0
+          # Azure tenant id
+          tenant_id: b3236d99-9c3f-40e6-ae82-44c921c09e05
 
-      - name: Install Dependencies
-        run: npm install
