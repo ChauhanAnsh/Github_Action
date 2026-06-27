@@ -9,13 +9,15 @@ permissions:
 
 jobs:
   job1:
-    name: Azure login
+    name: Azure Login
     runs-on: ubuntu-latest
 
     steps:
-      - name: Azure login
-        uses: azure/login@v3
+      - name: Azure Login
+        uses: azure/login@v2
         with:
-          client-id: "286c5b49-b53a-4d00-9161-050a4a2f0666"
-          tenant-id: "b3236d99-9c3f-40e6-ae82-44c921c09e05"
-          subscription-id: "06fddf6b-1702-4b31-ac73-942642d910e0"
+          client-id:  286c5b49-b53a-4d00-9161-050a4a2f0666
+          client-secret: y_g8Q~lnc-p.ImC3kBCcqH31.dym-ag9FRWRZcQJ
+          tenant-id:  b3236d99-9c3f-40e6-ae82-44c921c09e05 }}
+          subscription-id:  06fddf6b-1702-4b31-ac73-942642d910e0
+          enable-AzPSSession: true
